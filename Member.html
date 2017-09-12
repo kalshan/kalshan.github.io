@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Bootstrap Example</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>slide show</title>
+    <link rel="stylesheet" type="text/css" href="css/font-awesome.min.css">
+
+    <style>
+
+        span1{
+
+            padding-bottom: 0px;
+            padding-left: inherit;
+            padding-top: 0px;
+        }
+
+        h0{
+            font-size: 35px;
+            color: blueviolet;
+            font-style:normal;
+
+        }
+        .row.content {height: 1500px}
+
+
+        .sidenav {
+            background-color: #f1f1f1;
+            height: 100%;
+        }
+
+
+        footer {
+            background-color: #555;
+            color: white;
+            padding: 10px;
+            width: 100%;
+        }
+        @media screen and (max-width: 7px) {
+            .sidenav {
+                height: auto;
+                padding: 15px;
+            }
+            .row.content {height: auto;}
+        }
+
+        input[type=text], select {
+            width: 75%;
+            padding: 10px 10px;
+            margin: 8px 0;
+            display: inline-block;
+            border: 3px solid #ccc;
+            border-radius: 10px;
+            box-sizing: border-box;
+        }
+
+        input[type=submit] {
+            width: 30%;
+            background-color: #4CAF50;
+            color: white;
+            padding: 10px 10px;
+            margin: 80px 10px;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+
+        input[type=submit]:hover {
+            background-color: #45a049;
+        }
+
+        input[]{
+
+        }
+
+        div {
+            border-radius: 0px;
+            background-color: #f2f2f2;/*#f2f2f2*/
+            padding: 10px;
+        }
+        ul{
+            background-color: black;
+            mso-foreground: green;
+        }
+    </style>
+</head>
+
+<body>
+
+<div class="container-fluid">
+    <div class="row content">
+        <div class="col-sm-3 sidenav">
+            <h0>IJSE CHESS</h0>
+            <ul class="nav nav-pills nav-stacked">
+                <li><a href="main.html">Home</a></li>
+                <li><a href=""></a></li>
+                <li><a href="">Member</a></li>
+                <li><a href=""></a></li>
+                <li><a href="#section3">pictures</a></li>
+                <li><a href=""></a></li>
+                <li><a href="#section3">About</a></li>
+                <li><a href=""></a></li>
+                <li><a href="#section3">History</a></li>
+                <li><a href=""></a></li>
+
+            </ul><br>
+            <div class="input-group">
+                <input type="text" class="form-control" placeholder="Search Blog..">
+                <span class="input-group-btn">
+          <button class="btn btn-default" type="button">
+            <span1 class="glyphicon glyphicon-search"></span1>
+          </button>
+        </span>
+            </div>
+        </div>
+
+        <h3>Member Details</h3>
+
+        <div>
+            <form action="/action_page.php">
+                <label for="fname">First Name</label>
+                <input type="text" id="fname" name="firstname" placeholder="Your name..">
+
+                <label for="lname">Last Name</label>
+                <input type="text" id="lname" name="lastname" placeholder="Your last name..">
+
+                <label for="id">ID</label>
+                <input type="text" id="id" name="ID" placeholder="Your id..">
+
+                <label for="address">Address</label>
+                <input type="text" id="address" name="Address" placeholder="Your address..">
+
+                <label for="nic">Nic</label>
+                <input type="text" id="nic" name="nic" placeholder="Your nic..">
+
+
+
+
+                <label for="country">Gender</label>
+                <select id="country" name="country">
+                    <option value="male">Male</option>
+                    <option value="female">Female</option>
+                </select>
+
+                <input type="submit" value="Save"></form>
+            <li><a href="chess.html"></a></li>
+            </form>
+        </div>
+
+
+
+    </div>
+
+<footer class="container-fluid">
+    <p>Footer Text</p>
+</footer>
+
+</body>
+</html>
