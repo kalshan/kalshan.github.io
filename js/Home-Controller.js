@@ -38,49 +38,70 @@ $('.chesspieces').on("click",function (eventData) {
 
     }
 });
-/////////////////////////////////////////////////////////////////////////////////////////////////////////
-function pathofBlackpond(eventData) {
-    currentPossition=eventData;
-    suares.removeClass('selectpath');
-    chesspieces.removeClass('clickpiece');
-    suares.removeClass('crosspiece');
-    var currentId=currentPossition.parent().attr('id');
-    var letter=currentId.charAt(0);
-    var no=currentId.charAt(1);
-    var LettersArrayPossition=($.inArray(letter,Letters));
-    var numArrayPossition=($.inArray(parseInt(no),numbers));
-    var tempId=Letters[LettersArrayPossition]+numbers[numArrayPossition+1];
-    var tempId1=Letters[LettersArrayPossition+1]+numbers[numArrayPossition+1];
-    var tempId2=Letters[LettersArrayPossition-1]+numbers[numArrayPossition+1];
-    var x=LettersArrayPossition;
-
-    for (var y=numArrayPossition+1;y<4;y++){
-        tempId=Letters[x]+numbers[y];
-        if (!($("#"+tempId).children().hasClass('chesspieces'))){
-            $("#"+tempId).addClass('selectpath');
-            currentPossition.addClass('clickpiece');
-        }
-        else{
-            break;
-        }
-    }
-    if (!($("#"+tempId).children().hasClass('chesspieces'))){
-        $("#"+tempId).addClass('selectpath');
-        currentPossition.addClass('clickpiece');
-        currentPossition.removeClass('selectpath');
-    }
-    if ($("#"+tempId1).children().hasClass('white')){
-        $("#"+tempId1).addClass('crosspiece');
-        currentPossition.addClass('clickpiece');
-        currentPossition.removeClass('selectpath');
-    }
-    if ($("#"+tempId2).children().hasClass('white')){
-        $("#"+tempId2).addClass('crosspiece');
-        currentPossition.addClass('clickpiece');
-        currentPossition.removeClass('selectpath');
-    }
-}
+//////////////////////////////////////////////////
+//
+//
+// function pathofWhiteRook(parameters) {
+//
+//     currentPossition = eventData;
+//     suares.removeClass('selectpath');
+//     chesspieces.removeClass('clickpiece');
+//     suares.removeClass('crosspiece');
+//     var currentId = currentPossition.parent().attr('id');
+//     var letter = currentId.charAt(0);
+//     var no = currentId.charAt(1);
+//     var LettersArrayPossition = ($.inArray(letter, Letters));
+//     var numArrayPossition = ($.inArray(parseInt(no), numbers));
+//     var tempId = Letters[LettersArrayPossition] + numbers[numArrayPossition + 1];
+//
+//     var x = LettersArrayPossition;
+//     for (var y = numArrayPossition + 1; y < 8; y++) {
+//         tempId = Letters[x] + numbers[y];
+//         if (!($("#" + tempId).children().hasClass('chesspieces'))) {
+//             $("#" + tempId).addClass('selectpath');
+//             currentPossition.addClass('clickpiece');
+//         }
+//         else {
+//             break;
+//         }
+//     }
+//
+//     var x1 = numArrayPossition;
+//     for (var y = LettersArrayPossition + 1; y < 8; y++) {
+//         tempId = Letters[y] + numbers[x1];
+//         if (!($("#" + tempId).children().hasClass('chesspieces'))) {
+//             $("#" + tempId).addClass('selectpath');
+//             currentPossition.addClass('clickpiece');
+//         }
+//         else {
+//             break;
+//         }
+//     }
+//
+//     var x2 = numArrayPossition;
+//     for (var y = LettersArrayPossition - 1; y >= 0; y--) {
+//         tempId = Letters[y] + numbers[x2];
+//         if (!($("#" + tempId).children().hasClass('chesspieces'))) {
+//             $("#" + tempId).addClass('clickpiece');
+//             currentPossition.addClass('clickpiece');
+//         }
+//         else {
+//             break;
+//         }
+//     }
+//     for (var y = numArrayPossition - 1; y >= 0; y--) {
+//         tempId = Letters[x] + numbers[y];
+//         if (!($("#" + tempId).children().hasClass('chesspieces'))) {
+//             $("#" + tempId).addClass('selectpath');
+//             currentPossition.addClass('clickpices');
+//         }
+//         else {
+//             break;
+//         }
+//     }
+// }
 //////////////////////////////////////////////////////////////////////////////////////////////////////////////
+
 function pathofRook(eventData) {
     currentPossition=eventData;
     suares.removeClass('selectpath');
@@ -92,8 +113,9 @@ function pathofRook(eventData) {
     var LettersArrayPossition=($.inArray(letter,Letters));
     var numArrayPossition=($.inArray(parseInt(no),numbers));
     var tempId=Letters[LettersArrayPossition]+numbers[numArrayPossition+1];
-    //var tempId1=Letters[LettersArrayPossition+1]+numbers[numArrayPossition+1];
-    //var tempId2=Letters[LettersArrayPossition-1]+numbers[numArrayPossition+1];
+
+
+
     var x=LettersArrayPossition;
     for (var y=numArrayPossition+1;y<8;y++){
         tempId=Letters[x]+numbers[y];
@@ -137,9 +159,58 @@ function pathofRook(eventData) {
             break;
         }
     }
+
+
 }
+
+/////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+function pathofBlackpond(eventData) {
+    currentPossition=eventData;
+    suares.removeClass('selectpath');
+    chesspieces.removeClass('clickpiece');
+    suares.removeClass('crosspiece');
+    var currentId=currentPossition.parent().attr('id');
+    var letter=currentId.charAt(0);
+    var no=currentId.charAt(1);
+    var LettersArrayPossition=($.inArray(letter,Letters));
+    var numArrayPossition=($.inArray(parseInt(no),numbers));
+    var tempId=Letters[LettersArrayPossition]+numbers[numArrayPossition+1];
+    var tempId1=Letters[LettersArrayPossition+1]+numbers[numArrayPossition+1];
+    var tempId2=Letters[LettersArrayPossition-1]+numbers[numArrayPossition+1];
+    var x=LettersArrayPossition;
+
+    for (var y=numArrayPossition+1;y<4;y++){
+        tempId=Letters[x]+numbers[y];
+        if (!($("#"+tempId).children().hasClass('chesspieces'))){
+            $("#"+tempId).addClass('selectpath');
+            currentPossition.addClass('clickpiece');
+        }
+        else{
+            break;
+        }
+    }
+    if (!($("#"+tempId).children().hasClass('chesspieces'))){
+        $("#"+tempId).addClass('selectpath');
+        currentPossition.addClass('clickpiece');
+        currentPossition.removeClass('selectpath');
+
+    }
+    if ($("#"+tempId1).children().hasClass('white')){
+        $("#"+tempId1).addClass('crosspiece');
+        currentPossition.addClass('clickpiece');
+        currentPossition.removeClass('selectpath');
+    }
+    if ($("#"+tempId2).children().hasClass('white')){
+        $("#"+tempId2).addClass('crosspiece');
+        currentPossition.addClass('clickpiece');
+        currentPossition.removeClass('selectpath');
+    }
+}
+
 /////////////////////////////////////////////////////////////////////////////////////////////////////////////
 function pathofWhitekpond(eventData) {
+
     currentPossition=eventData;
     suares.removeClass('selectpath');
     chesspieces.removeClass('clickpiece');
@@ -164,6 +235,7 @@ function pathofWhitekpond(eventData) {
         case "im23" :CountArray[6]++; break;
         case "im24" :CountArray[7]++; break;
     }
+
     if (CountArray[0]==1){
         if (!($("#"+tempId1).children().hasClass('chesspieces'))){
             $("#"+tempId1).addClass('selectpath');
@@ -188,6 +260,7 @@ function pathofWhitekpond(eventData) {
             $("#"+tempId1).addClass('selectpath');
             currentPossition.addClass('clickpiece');
             currentPossition.removeClass('selectpath');
+
         }
         if ($("#"+tempId3).children().hasClass('Black')){
             $("#"+tempId3).addClass('crosspiece');
@@ -224,6 +297,7 @@ function pathofWhitekpond(eventData) {
             $("#"+tempId1).addClass('selectpath');
             currentPossition.addClass('clickpiece');
             currentPossition.removeClass('selectpath');
+
         }
         if ($("#"+tempId3).children().hasClass('Black')){
             $("#"+tempId3).addClass('crosspiece');
@@ -260,6 +334,7 @@ function pathofWhitekpond(eventData) {
             $("#"+tempId1).addClass('selectpath');
             currentPossition.addClass('clickpiece');
             currentPossition.removeClass('selectpath');
+
         }
         if ($("#"+tempId3).children().hasClass('Black')){
             $("#"+tempId3).addClass('crosspiece');
@@ -333,6 +408,7 @@ function pathofWhitekpond(eventData) {
             $("#"+tempId1).addClass('selectpath');
             currentPossition.addClass('clickpiece');
             currentPossition.removeClass('selectpath');
+
         }
         if ($("#"+tempId3).children().hasClass('Black')){
             $("#"+tempId3).addClass('crosspiece');
@@ -369,6 +445,7 @@ function pathofWhitekpond(eventData) {
             $("#"+tempId1).addClass('selectpath');
             currentPossition.addClass('clickpiece');
             currentPossition.removeClass('selectpath');
+
         }
         if ($("#"+tempId3).children().hasClass('Black')){
             $("#"+tempId3).addClass('crosspiece');
@@ -405,6 +482,7 @@ function pathofWhitekpond(eventData) {
             $("#"+tempId1).addClass('selectpath');
             currentPossition.addClass('clickpiece');
             currentPossition.removeClass('selectpath');
+
         }
         if ($("#"+tempId3).children().hasClass('Black')){
             $("#"+tempId3).addClass('crosspiece');
@@ -478,6 +556,7 @@ function pathofWhitekpond(eventData) {
             $("#"+tempId1).addClass('selectpath');
             currentPossition.addClass('clickpiece');
             currentPossition.removeClass('selectpath');
+
         }
         if ($("#"+tempId3).children().hasClass('Black')){
             $("#"+tempId3).addClass('crosspiece');
@@ -492,6 +571,7 @@ function pathofWhitekpond(eventData) {
     }
 }
 //////////////////////////////////////////////////////////////////////////////////////////////////////////
+
 var IdW=$("#firstRow").children().first().attr('id');
 var IdB=$("#firstRowB").children().first().attr('id');
 
@@ -525,3 +605,12 @@ $(".square").on("click",function (eventData) {
         suares.removeClass('crosspiece');
     }
 });
+
+
+
+
+
+
+
+
+

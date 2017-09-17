@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <title>Bootstrap Example</title>
+    <title>Ultra Chess</title>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
@@ -10,53 +10,62 @@
     <link rel="stylesheet" type="text/css" href="css/font-awesome.min.css">
 
     <style>
-
-        span1{
-
-            padding-bottom: 0px;
-            padding-left: inherit;
+        body{
+            margin-top: 0px;
             padding-top: 0px;
         }
 
+
         h0{
-            font-size: 35px;
-            color: blueviolet;
+
+            font-size: 30px;
+            color:yellow ;
             font-style:normal;
 
         }
-        .row.content {height: 1500px}
-
-
-        .sidenav {
-            background-color: #f1f1f1;
-            height: 100%;
+        .row.content {
+            top: 500px;
+            bottom: 50px;
+            height: 1500px;
+            margin-top: 0px;
+            padding-top: 0px;
         }
-
+        .sidenav {
+            background-color: black;/*#f1f1f1*/
+            height: 100%;
+            width: 300px;
+        }
 
         footer {
             background-color: #555;
             color: white;
-            padding: 10px;
-            width: 100%;
+            padding: 15px;
         }
-        @media screen and (max-width: 7px) {
+
+        /* On small screens, set height to 'auto' for sidenav and grid */
+        @media screen and (max-width: 767px) {
             .sidenav {
                 height: auto;
                 padding: 15px;
             }
             .row.content {height: auto;}
         }
-
+        c{
+            padding-left: 500px;
+            font-size: 29px;
+            color:mediumblue;
+            font-style: oblique;
+        }
         input[type=text], select {
-            width: 75%;
-            padding: 10px 10px;
+
+            width: 76%;
+            padding: 10px;
             margin: 8px 0;
             display: inline-block;
             border: 3px solid #ccc;
             border-radius: 10px;
             box-sizing: border-box;
         }
-
         input[type=submit] {
             width: 30%;
             background-color: #4CAF50;
@@ -67,58 +76,60 @@
             border-radius: 4px;
             cursor: pointer;
         }
-
-        input[type=submit]:hover {
-            background-color: #45a049;
+        span{
+            padding-left: 0px;
+            top: 4px;
         }
 
-        input[]{
-
+        h3{
+            padding-right: 20px;
+            font-size: 25px;
+            color: mediumblue;
         }
-
-        div {
-            border-radius: 0px;
-            background-color: #f2f2f2;/*#f2f2f2*/
-            padding: 10px;
-        }
-        ul{
-            background-color: black;
-            mso-foreground: green;
+        footer{
+            background-color: #555;
+            color: white;
+            padding: 15px;
         }
     </style>
 </head>
-
 <body>
-
+<!--<audio controls autoplay>-->
+    <!--<source src="audio/Afrojack%20feat.%20Sting%20-%20Catch%20Tomorrow%20(Dustin%20Lenji%20Remix)%20%5Bsickworldmusic%5D.mp3">-->
+<!--</audio>-->
+<nav class="navbar navbar-default navbar-fixed-top">
+    <div class="container">
+        <div class="navbar-header">
+            <a class="navbar-brand"><c>Ultra Chess</c></a>
+        </div>
+    </div>
+</nav>
 <div class="container-fluid">
     <div class="row content">
         <div class="col-sm-3 sidenav">
-            <h0>IJSE CHESS</h0>
+            <br>
+            <h0>ULTRA CHESS</h0>
             <ul class="nav nav-pills nav-stacked">
-                <li><a href="main.html">Home</a></li>
-                <li><a href=""></a></li>
-                <li><a href="">Member</a></li>
-                <li><a href=""></a></li>
-                <li><a href="#section3">pictures</a></li>
-                <li><a href=""></a></li>
-                <li><a href="#section3">About</a></li>
-                <li><a href=""></a></li>
-                <li><a href="#section3">History</a></li>
-                <li><a href=""></a></li>
-
+                <br>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="chess.html">We Play</a></li>
+                <li><a href="Member.html">Member</a></li>
+                <li><a href="pictures.html">pictures</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="history.html">History</a></li>
             </ul><br>
             <div class="input-group">
                 <input type="text" class="form-control" placeholder="Search Blog..">
                 <span class="input-group-btn">
           <button class="btn btn-default" type="button">
-            <span1 class="glyphicon glyphicon-search"></span1>
+            <span class="glyphicon glyphicon-search"></span>
           </button>
         </span>
+
             </div>
         </div>
 
         <h3>Member Details</h3>
-
         <div>
             <form action="/action_page.php">
                 <label for="fname">First Name</label>
@@ -145,18 +156,14 @@
                     <option value="female">Female</option>
                 </select>
 
-                <input type="submit" value="Save"></form>
-            <li><a href="chess.html"></a></li>
+                <input type="submit" value="Submit"></form>
             </form>
         </div>
-
-
-
     </div>
 
-<footer class="container-fluid">
-    <p>Footer Text</p>
-</footer>
-
+    <footer class="container-fluid">
+        <p>Kalshanjananjaya97@gmail.com</p>
+    </footer>
+</div>
 </body>
 </html>

@@ -1,16 +1,19 @@
 body{
+    background-size: 1366px;
     background-color: #d0e9c6;
-    background-image: url("../images/chess_silver_glass_table_form_15287_1920x1080.jpg");
+    background-image: url("../images/dark_souls_3_2016_game-3840x2160.jpg");
     height: 45px;
     width: 70px;
 
 }
 #main{
-    background-color: #6f4a52;
-    height: 700px;
+    /*background-color: #6f4a52;*/
+    /*border: groove;*/
+    /*border-color: black;*/
+    height: 0px;
     width: 700px;
-    left:275px;
-    top: 25px;
+    left:310px;
+    top: -485px;
 }
 .col-xs-1{
     height: 70px;
@@ -35,12 +38,65 @@ body{
     top: 5px;
     z-index: 9999;
 }
+c{
+    padding-left: 50px;
+    font-size: 29px;
+    color:blue;
+    font-style: italic;
+}
+
+#scoreboard{
+
+    top: 100px;
+    left: 50px;
+    height: 500px;
+    width: 250px;
+    /*background-color: #2aabd2;*/
+    border: groove;
+    border-color: black;
+}
+#scoreboard1{
+    top: -600px;
+    left: 700px;
+    height: 500px;
+    width: 250px;
+    /*background-color: #2aabd2;*/
+    border: groove;
+    border-color: black;
+}
+#score{
+    height: 70px;
+    color: white;
+    /*background-color: black;*/
+    border: groove;
+    border-color: black;
+    text-align: center;
+    font-size: 28px;
+    font-style: oblique;
+
+}
+#score1{
+
+    height: 70px;
+    color: white;
+    /*background-color: black;*/
+    border: groove;
+    border-color: black;
+    text-align: center;
+    font-size: 28px;
+    font-style: oblique;
+}
+
+nav{
+
+
+}
 .selectpath{
-    box-shadow: inset 0px 0px 6px 10px rgba(50, 345, 59, .8);
+    box-shadow: inset 3px 3px 10px 12px rgb(0, 111, 5);
 }
 .clickpiece{
-    box-shadow: inset 0px 0px 6px 10px rgba(50, 2, 590, .8);
+    box-shadow: inset 3px 3px 10px 12px rgb(0, 255, 17);
 }
 .crosspiece{
-    box-shadow: inset 0px 0px 6px 10px rgba(230, 50, 60, .7);
+    box-shadow: inset 0px 0px 6px 10px rgba(255, 67, 22, 0.91);
 }
